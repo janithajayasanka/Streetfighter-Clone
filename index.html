@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+        
+        body{
+            display: flex;
+        }
+
+        body, canvas{
+            background-color: black;
+        }
+
+        canvas {
+            width: 100%;
+            object-fit: contain;
+            /* to make things pixelated without blurring the image */
+            image-rendering: crisp-edges;
+            image-rendering: pixelated;
+        }
+
+        img {
+            display: none;
+            /* so that image only can bring from javascript */
+        }
+    </style>
+    <script type="module" src="src/index.js"></script>
+</head>
+<body>
+    <canvas></canvas>
+    <img src="./img/ken.png" alt="ken">
+    <img src="./img/background.png" alt="background">
+</body>
+</html>
